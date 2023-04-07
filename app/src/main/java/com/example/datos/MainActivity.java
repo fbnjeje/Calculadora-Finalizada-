@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText resultadoOpcion;
 
-    Button Test;
+    Button Test,Map;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -25,11 +25,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         Opcion = (EditText) findViewById(R.id.num1);
-
         resultadoOpcion = (EditText) findViewById(R.id.Operation);
+
+        Map  = (Button)findViewById(R.id.map);
+        Map.setOnClickListener(v -> {
+            Intent mapActivity = new Intent(this,MapsActivity.class);
+            startActivity(mapActivity);
+        });
 
         Test = (Button) findViewById(R.id.test);
         Test.setOnClickListener(this);
+
     }
 
     //Metodo Boton El boton siguiente
@@ -41,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 */
 
+    ;
+
+
 
 
     @Override
@@ -49,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         n1 = Float.parseFloat(Opcion.getText().toString());
+
 
 
         if (n1 == 1.0){

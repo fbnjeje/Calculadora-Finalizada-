@@ -16,6 +16,7 @@
     /*Tercera Actividad */
 
     <string name="tv3">Resta Activity</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 
 </resources>
