@@ -1,7 +1,6 @@
 package com.example.datos;
 
 import androidx.fragment.app.FragmentActivity;
-
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -15,14 +14,14 @@ import com.example.datos.databinding.ActivityMapsBinding;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private ActivityMapsBinding binding;
+private ActivityMapsBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMapsBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+     binding = ActivityMapsBinding.inflate(getLayoutInflater());
+     setContentView(binding.getRoot());
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -44,8 +43,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng Uniagustiniana = new LatLng(4.653427756378528,-74.1448238619154);
+        mMap.addMarker(new MarkerOptions().position(Uniagustiniana).title("Marker in Universidad papi jm"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(Uniagustiniana));
+        mMap.animateCamera( CameraUpdateFactory.zoomTo( 17.0f ) );
     }
 }
